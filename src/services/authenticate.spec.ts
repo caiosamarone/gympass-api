@@ -27,7 +27,7 @@ describe('authenticate service', () => {
     expect(user.id).toEqual(expect.any(String))
   })
   it('should not authenticate with wrong email', async () => {
-    expect(async () => {
+    await expect(async () => {
       await sut.execute({
         email: 'john.does@mail.com',
         password: '1234567',
@@ -43,7 +43,7 @@ describe('authenticate service', () => {
     }
     await usersRepository.create(userMock)
 
-    expect(async () => {
+    await expect(async () => {
       await sut.execute({
         email: 'john.does@mail.com',
         password: '1234567',
