@@ -30,6 +30,8 @@
     "vitest": "2.0.4"
   },
   "dependencies": {
+    "@fastify/swagger": "8.15.0",
+    "@fastify/swagger-ui": "4.0.1",
     "@prisma/client": "5.16.1",
     "bcryptjs": "2.4.3",
     "dotenv": "16.4.5",
